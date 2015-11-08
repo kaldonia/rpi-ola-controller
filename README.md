@@ -22,7 +22,7 @@ Use pip to install the required python libraries:
 	
 Now you can run the controller with the sample configuration file:
 
-	sudo ./rpi-ola-controller.py -c conf/simpleconfig.yaml
+	sudo ./rpi-ola-controller.py -c conf/simplesetup.yaml
 	
 The evdev library captures the keyboard input on device level and needs root privileges. The above command will search for all available input devices and list them:
 
@@ -34,7 +34,7 @@ The evdev library captures the keyboard input on device level and needs root pri
 	  
 Select your keyboard and add the device to the command line:
 
-	sudo ./rpi-ola-controller.py -c conf/simpleconfig.yaml -i /dev/input/event2
+	sudo ./rpi-ola-controller.py -c conf/simplesetup.yaml -i /dev/input/event2
 	
 The controller will play the first scene. You should see the DMX values change in ola_dmxmonitor. Try changing scenes with the number keys. If you press a key that is not mapped to a scene, the key code will be displayed, so that you can configure this key in the yaml file.
 
